@@ -6,6 +6,7 @@ const connectDB = async () => {
         console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
         console.error(`Error: ${error.message}`);
+        console.error('Hint: Make sure MONGO_URI is set in your environment variables and IP is whitelisted in Atlas.');
         process.exit(1);
     }
 };
